@@ -36,8 +36,14 @@ export async function addToSelects(editor: vscode.TextEditor, options?: SelectOp
 			if (select.start.line === select.end.line) {
 				edit.insert(select.start, createInsertString(increment++, options));
 			} else {
-				for (let i = select.start.line; i <= select.end.line; i++) {
-					edit.insert(new vscode.Position(i, 0), createInsertString(increment++, options));
+				if (options?.sorted && options.ascending === false) {
+					for (let i = select.end.line; i >= select.start.line; i--) {
+						edit.insert(new vscode.Position(i, 0), createInsertString(increment++, options));
+					}
+				} else {
+					for (let i = select.start.line; i <= select.end.line; i++) {
+						edit.insert(new vscode.Position(i, 0), createInsertString(increment++, options));
+					}
 				}
 			}
 		});
