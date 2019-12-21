@@ -13,6 +13,8 @@
 		"type": "git",
 		"url": "https://github.com/askleon/selects.git"
 	},
+	"icon": "media/img/icon.png",
+	"homepage": "https://github.com/askleon/selects/blob/master/README.md",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -78,5 +80,6 @@
 		"typescript": "^3.7.4",
 		"vsce": "^1.71.0",
 		"vscode-test": "^1.2.2"
-	}
+	},
+	"private": true
 }
