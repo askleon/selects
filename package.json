@@ -20,8 +20,6 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:selects.restartExtension",
-		"onCommand:selects.openConfig",
 		"onCommand:selects.incrementSortedAscending",
 		"onCommand:selects.incrementSortedDescending",
 		"onCommand:selects.incrementUnsorted",
@@ -30,16 +28,6 @@
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
-			{
-				"command": "selects.restartExtension",
-				"title": "Restart extension",
-				"category": "Selects"
-			},
-			{
-				"command": "selects.openConfig",
-				"title": "Open config",
-				"category": "Selects"
-			},
 			{
 				"command": "selects.incrementSortedAscending",
 				"title": "Increment ascending",
