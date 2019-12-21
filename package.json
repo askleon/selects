@@ -1,0 +1,93 @@
+{
+	"author": {
+		"name": "Leon Ask",
+		"url": "https://github.com/askleon"
+	},
+	"name": "selects",
+	"publisher": "LeonAsk",
+	"displayName": "selects",
+	"description": "Visual code extension which adds the ability to insert or increment on selections.",
+	"license": "MIT",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/askleon/selects.git"
+	},
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:selects.restartExtension",
+		"onCommand:selects.openConfig",
+		"onCommand:selects.incrementSortedAscending",
+		"onCommand:selects.incrementSortedDescending",
+		"onCommand:selects.incrementUnsorted",
+		"onCommand:selects.insertString"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "selects.restartExtension",
+				"title": "Restart extension",
+				"category": "Selects"
+			},
+			{
+				"command": "selects.openConfig",
+				"title": "Open config",
+				"category": "Selects"
+			},
+			{
+				"command": "selects.incrementSortedAscending",
+				"title": "Increment ascending",
+				"category": "Selects"
+			},
+			{
+				"command": "selects.incrementSortedDescending",
+				"title": "Increment descending",
+				"category": "Selects"
+			},
+			{
+				"command": "selects.incrementUnsorted",
+				"title": "Increment",
+				"category": "Selects"
+			},
+			{
+				"command": "selects.insertString",
+				"title": "Insert string",
+				"category": "Selects"
+			}
+		],
+		"configuration": {
+			"title": "Selects",
+			"properties": {
+				"selects.trailing": {
+					"type": "string",
+					"default": " ",
+					"description": "default: ' ' (whitespace)"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"tslint": "^5.20.0",
+		"typescript": "^3.7.4",
+		"vscode-test": "^1.2.2"
+	}
+}
