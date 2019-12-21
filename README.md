@@ -5,6 +5,18 @@
 - Increment number on selections (ascending / descending / selected order)
 - Insert string on selections
 
+### Insert
+![insert](media/insert.gif)
+
+### Increment
+![insert](media/increment.gif)
+
+### Increment Ascending
+![insert](media/ascending.gif)
+
+### Increment Descending
+![insert](media/descending.gif)
+
 ## Requirements
 
 ## Extension Settings
