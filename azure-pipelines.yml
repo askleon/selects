@@ -27,8 +27,9 @@ steps:
   condition: and(succeeded(), eq(variables['Agent.OS'], 'Linux'))
 
 - bash: |
-    echo ">>> Compile vscode-test"
+    echo ">>> NPM Install"
     npm install
+    echo ">>> Compile vscode-test"
     npm run compile
     echo ">>> Compiled vscode-test"
     cd sample
