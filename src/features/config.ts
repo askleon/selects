@@ -1,15 +1,14 @@
 import * as vscode from 'vscode';
 
-interface Config {
-	trailing: string;
-}
+export class Config {
+	private config = vscode.workspace.getConfiguration('selects');
+	private keyOrDefault = <T>(name: string) => this.config.get<T>(name) ?? "";
 
-export class Configuration implements Config {
-	get trailing(): string {
-		return this.config.get('trailing') ?? "";
+	get incrementTrailing(): string {
+		return this.keyOrDefault('increment.trailing');
 	}
 
-	private get config() {
-		return vscode.workspace.getConfiguration('selects');
+	get insertTrailing(): string {
+		return this.keyOrDefault('insert.trailing');
 	}
 }

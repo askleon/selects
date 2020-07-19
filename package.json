@@ -54,7 +54,12 @@
 		"configuration": {
 			"title": "Selects",
 			"properties": {
-				"selects.trailing": {
+				"selects.increment.trailing": {
+					"type": "string",
+					"default": ". ",
+					"description": "default: '. ' (dot and whitespace)"
+				},
+				"selects.insert.trailing": {
 					"type": "string",
 					"default": " ",
 					"description": "default: ' ' (whitespace)"
