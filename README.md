@@ -1,5 +1,4 @@
 # selects README
-![CI](https://github.com/askleon/selects/workflows/CI/badge.svg)
 ## Features
 - Increment number on selections (ascending / descending / selected order)
 - Insert string on selections
