@@ -1,6 +1,5 @@
 # selects README
-[![Build Status](https://dev.azure.com/LeonAsk/selects/_apis/build/status/askleon.selects?branchName=master)](https://dev.azure.com/LeonAsk/selects/_build/latest?definitionId=3&branchName=master)
-
+![CI](https://github.com/askleon/selects/workflows/CI/badge.svg)
 ## Features
 - Increment number on selections (ascending / descending / selected order)
 - Insert string on selections
